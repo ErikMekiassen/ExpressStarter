@@ -1,6 +1,6 @@
-import notaterService from './notaterService'
-import { INote, INoteDTO } from './notes';
-const service = new notaterService()
+import brukerService from './brukerService'
+import { IBruker, IBrukerDTO } from './bruker';
+const service = new brukerService()
 const express = require('express');
 const router = express.Router();
 
