@@ -12,6 +12,6 @@ app.get('/hellos', (req, res) => {
 app.use('/notes', notescontroller);
 app.use('/bruker', brukercontroller);
 
-app.listen(8080, () => {
-    console.log('Listening on port 8080');
+app.listen(8070, () => {
+    console.log('Listening on port 8070');
 })
