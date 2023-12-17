@@ -1,1 +1,137 @@
-GET localhost:8080
+@path = http://localhost:8070
+
+### 
+
+GET {{path}}/bruker HTTP/1.1
+
+### 10 fake brukere
+
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user1",
+    "fornavn": "John",
+    "etternavn": "Doe",
+    "epost": "john.doe@example.com",
+    "telefonnummer": "+1 1234567890"
+}
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user2",
+    "fornavn": "Jane",
+    "etternavn": "Smith",
+    "epost": "jane.smith@example.com",
+    "telefonnummer": "+1 9876543210"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user3",
+    "fornavn": "Alex",
+    "etternavn": "Johnson",
+    "epost": "alex.johnson@example.com",
+    "telefonnummer": "+1 5555555555"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user4",
+    "fornavn": "Emily",
+    "etternavn": "Wilson",
+    "epost": "emily.wilson@example.com",
+    "telefonnummer": "+1 9999999999"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user5",
+    "fornavn": "David",
+    "etternavn": "Brown",
+    "epost": "david.brown@example.com",
+    "telefonnummer": "+1 7777777777"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user6",
+    "fornavn": "Sarah",
+    "etternavn": "Taylor",
+    "epost": "sarah.taylor@example.com",
+    "telefonnummer": "+1 8888888888"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user7",
+    "fornavn": "Michael",
+    "etternavn": "Davis",
+    "epost": "michael.davis@example.com",
+    "telefonnummer": "+1 1231231231"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user8",
+    "fornavn": "Olivia",
+    "etternavn": "Johnson",
+    "epost": "olivia.johnson@example.com",
+    "telefonnummer": "+1 7897897897"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user9",
+    "fornavn": "Benjamin",
+    "etternavn": "Miller",
+    "epost": "benjamin.miller@example.com",
+    "telefonnummer": "+1 4564564564"
+}
+
+###
+
+POST {{path}}/bruker HTTP/1.1
+Content-Type: application/json
+
+{
+    "brukernavn": "fake_user10",
+    "fornavn": "Sophia",
+    "etternavn": "Smith",
+    "epost": "sophia.smith",
+    "telefonnummer": "+1 4564564564"
+}
+
+###

@@ -1,9 +1,7 @@
-import notescontroller from './notater/notaterController';
-import brukercontroller from './bruker/brukerController';
 const fetch = require('node-fetch');
 
 const postData = {
-  key1: 'value1', 
+  key1: 'value1',
   key2: 'value2',
 };
 
@@ -11,6 +9,7 @@ const apiUrl = 'http://localhost:8070/bruker';
 const headers = {
   'Content-Type': 'application/json',
 };
+
 const loadData = async (times: number) => {
     for (let i = 0; i < times; i++) {
         try {
@@ -34,20 +33,4 @@ const loadData = async (times: number) => {
     }
     };
 }
-//const loadData = require('./loadData');
-const express = require('express');
-const app = express();
-
-app.use(express.json());
-
-app.get('/hellos', (req, res) => {
-    res.send('Hello World!');
-})
-
-app.use('/notes', notescontroller);
-app.use('/bruker', brukercontroller);
-
-app.listen(8070, () => {
-    console.log('Listening on port 8070');
-})
-loadData(100)
+module.exports = loadData
