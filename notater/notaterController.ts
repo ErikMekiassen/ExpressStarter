@@ -4,8 +4,12 @@ const service = new notaterService()
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.send(service.getAllByDateAdded())
+router.get('/:id', (req, res) => {
+    console.log(service.getAllById(req.params.id));
+    res.send(service.getAllById(req.params.id))
+})
+router.get('/all', (req, res) => {
+    return service.getAll()
 })
 router.post('/', (req, res) => {
     service.post(req.body)

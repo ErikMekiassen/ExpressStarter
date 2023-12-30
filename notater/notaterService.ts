@@ -2,8 +2,13 @@ import notaterRepo from "./notaterRepo";
 import {INote, INoteDTO} from "./notes";
 const repo = new notaterRepo();
 class notaterService {
-    getAllByDateAdded: () => INote[] = () => {
-        return repo.getAll();
+    getAllById = (id: number) => {
+        console.log("repo.getAll", repo.getAllById(id));
+        
+        return repo.getAllById(id);
+    }
+    getAll = () => {
+        return repo.getAll
     }
     post = (note: INoteDTO) => {
         return repo.post(note)

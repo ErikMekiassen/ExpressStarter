@@ -2,8 +2,11 @@ import data from './notaterDB';
 import { INote, INoteDTO } from './notes';
 class notaterRepo {
 
+    getAllById = (id) => {
+        return data.filter(it => it.relasjonsIdBruker === id)
+    }
     getAll = () => {
-        return data
+        return data.sort((a: INote, b: INote) => b.dateAdded.getTime() - a.dateAdded.getTime())
     }
     post = (note: INoteDTO) => {
         const highestId = Math.max(...data.map(note => note.id));

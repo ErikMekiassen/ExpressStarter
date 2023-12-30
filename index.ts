@@ -1,11 +1,6 @@
 import notescontroller from './notater/notaterController';
 import brukercontroller from './bruker/brukerController';
-const fetch = require('node-fetch');
 
-const postData = {
-  key1: 'value1', 
-  key2: 'value2',
-};
 
 const apiUrl = 'http://localhost:8070/bruker';
 const headers = {
@@ -50,4 +45,4 @@ app.use('/bruker', brukercontroller);
 app.listen(8070, () => {
     console.log('Listening on port 8070');
 })
-loadData(100)
+loadData(10)
