@@ -8,7 +8,7 @@ class notaterService {
         return repo.getAllById(id);
     }
     getAll = () => {
-        return repo.getAll
+        return repo.getAll()
     }
     post = (note: INoteDTO) => {
         return repo.post(note)

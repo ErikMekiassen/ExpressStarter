@@ -7,7 +7,13 @@ GET {{path}}/bruker HTTP/1.1
 
 ### get notater på bruker:
 
-GET {{path}}/notes/1
+GET {{path}}/notes/2
+
+
+### get notater på bruker:
+
+GET {{path}}/notes/all
+
 
 ### 10 fake brukere
 
@@ -30,9 +36,19 @@ Content-Type: application/json
 
 {
     "relasjonsIdBruker": 2,
-    "title": "Note 1",
+    "title": "Notwawadwadwadwwawade 1",
     "text": "Lorem ipsum dolor sit amet."
 }
 
-###
+### 
 
+
+PUT {{path}}/notes/7 HTTP/1.1
+Host: {{path}}
+Content-Type: application/json
+
+{
+    "relasjonsIdBruker": 2,
+    "title": "HEllo PUT ",
+    "text": "Lorem wwadwwadwadwadawdawdawor sit amet."
+}

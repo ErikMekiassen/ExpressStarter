@@ -1,12 +1,13 @@
 import data from './notaterDB';
 import { INote, INoteDTO } from './notes';
 class notaterRepo {
-
-    getAllById = (id) => {
-        return data.filter(it => it.relasjonsIdBruker === id)
+    
+    getAllById = (id: number) => {
+        return data.filter(it => it.relasjonsIdBruker == id)
     }
     getAll = () => {
-        return data.sort((a: INote, b: INote) => b.dateAdded.getTime() - a.dateAdded.getTime())
+        console.log("in wadkaiofdrepo ", data);
+        return data
     }
     post = (note: INoteDTO) => {
         const highestId = Math.max(...data.map(note => note.id));

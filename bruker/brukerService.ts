@@ -3,6 +3,8 @@ import {IBruker, IBrukerDTO, INyBrukerDTO} from "./bruker";
 const repo = new BrukerRepo();
 class brukerService {
     getAllByDateAdded: () => IBruker[] = () => {
+        console.log("bruker repo.getAll", repo.getAll());
+        
         return repo.getAll();
     }
     post = (bruker: INyBrukerDTO) => {

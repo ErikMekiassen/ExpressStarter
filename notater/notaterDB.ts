@@ -12,7 +12,7 @@ let data: Array<INote> = [
   },
   {
     "id": 2,
-    "relasjonsIdBruker": 1,
+    "relasjonsIdBruker": 2,
     "title": "Note 2",
     "text": "Consectetur adipiscing elit.",
     "dateAdded": currentDate 
