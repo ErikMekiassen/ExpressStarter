@@ -1,12 +1,12 @@
 import data from './notaterDB';
 import { INote, INoteDTO } from './notes';
+
 class notaterRepo {
     
     getAllById = (id: number) => {
         return data.filter(it => it.relasjonsIdBruker == id)
     }
     getAll = () => {
-        console.log("in wadkaiofdrepo ", data);
         return data
     }
     post = (note: INoteDTO) => {

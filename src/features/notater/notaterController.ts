@@ -5,20 +5,22 @@ import { Request, Response } from 'express';
 const service = new notaterService()
 const router = require('express').Router();
 
-router.get('/:id', (req: Request, res: Response) => {
+router.get('/bruker/:id', (req: Request, res: Response) => {
     console.log(service.getAllById(parseInt(req.params.id)));
-    res.send(service.getAllById(parseInt(req.params.id)))
+    return res.send(service.getAllById(parseInt(req.params.id)))
 })
-router.get('/all', (req: Request, res: Response) => {
-    return service.getAll()
+router.get('/', (req: Request, res: Response) => {
+    console.log("service.getAll()");
+    console.log(service.getAll());
+    return res.send(service.getAll())
 })
 router.post('/', (req: Request, res: Response) => {
     service.post(req.body)
-    res.send('')
+    return res.send('')
 })
 router.put('/:id', (req: Request, res: Response) => {
     service.put(req.params.id, req.body)
-    res.send('')
+    return res.send('')
 })
 
 export default router;

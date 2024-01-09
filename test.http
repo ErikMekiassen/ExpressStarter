@@ -2,17 +2,17 @@
 
 ### get brukere
 
-GET {{path}}/bruker HTTP/1.1
+GET {{path}}/bruker/1 HTTP/1.1
 
 
 ### get notater på bruker:
 
-GET {{path}}/notes/2
+GET {{path}}/notes/bruker/2
 
 
 ### get notater på bruker:
 
-GET {{path}}/notes/all
+GET {{path}}/notes
 
 
 ### 10 fake brukere
