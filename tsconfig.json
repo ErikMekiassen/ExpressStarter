@@ -1,3 +1,7 @@
 {
-    "compilerOptions": {"esModuleInterop": true}
+    "compilerOptions": {
+        "esModuleInterop": true ,
+          "strict": true
+    },
+    "exclude": ["node_modules/**/*"]
 }
