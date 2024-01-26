@@ -1,5 +1,5 @@
 import notaterService from './notaterService'
-import { INote, INoteDTO } from './notes';
+import { INote, INoteDTO } from './notater';
 import { Request, Response } from 'express';
 
 const service = new notaterService()

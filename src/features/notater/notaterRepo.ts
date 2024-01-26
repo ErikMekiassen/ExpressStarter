@@ -1,6 +1,6 @@
 import data from './notaterDB';
-import { INote, INoteDTO } from './notes';
-
+import { INote, INoteDTO } from './notater';
+const Notater = require('./NotaterModel')
 class notaterRepo {
     
     getAllById = (id: number) => {
@@ -10,9 +10,7 @@ class notaterRepo {
         return data
     }
     post = (note: INoteDTO) => {
-        const highestId = Math.max(...data.map(note => note.id));
         const newNote: INote = {
-            id: (highestId + 1),
             relasjonsIdBruker: note.relasjonsIdBruker,
             title: note.title,
             text: note.text,

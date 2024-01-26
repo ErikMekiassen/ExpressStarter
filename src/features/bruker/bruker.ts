@@ -17,5 +17,6 @@ interface INyBrukerDTO {
     etternavn: string,
     epost: string,
     telefonnummer: string,
+    dateAdded: Date
 }
 export { IBruker, IBrukerDTO, INyBrukerDTO };

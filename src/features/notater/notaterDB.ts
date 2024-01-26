@@ -1,4 +1,4 @@
-import { INote } from './notes';
+import { INote } from './notater';
 import fs from 'fs';
 
 let currentDate = new Date(new Date().getTime());

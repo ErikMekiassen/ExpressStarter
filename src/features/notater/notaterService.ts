@@ -1,5 +1,5 @@
 import notaterRepo from "./notaterRepo";
-import {INote, INoteDTO} from "./notes";
+import {INote, INoteDTO} from "./notater";
 const repo = new notaterRepo();
 class notaterService {
     getAllById = (id: number) => {
