@@ -11,4 +11,8 @@ interface INoteDTO {
     text: string,
     dateAdded?: Date,
 }
-export { INote, INoteDTO };
+interface INoteUpdateDTO {
+    title: string,
+    text: string
+}
+export { INote, INoteDTO, INoteUpdateDTO };

@@ -43,12 +43,11 @@ Content-Type: application/json
 ### 
 
 
-PUT {{path}}/notes/7 HTTP/1.1
+PUT {{path}}/notes/65b3734fe3c61c0812127fd5 HTTP/1.1
 Host: {{path}}
 Content-Type: application/json
 
 {
-    "relasjonsIdBruker": 2,
     "title": "HEllo PUT ",
     "text": "Lorem wwadwwadwadwadawdawdawor sit amet."
 }

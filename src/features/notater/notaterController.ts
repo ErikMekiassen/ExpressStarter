@@ -1,6 +1,7 @@
 import notaterService from './notaterService'
 import { INote, INoteDTO } from './notater';
 import { Request, Response } from 'express';
+import { ObjectId } from 'mongoose';
 
 const service = new notaterService()
 const router = require('express').Router();
@@ -19,8 +20,9 @@ router.post('/', (req: Request, res: Response) => {
     return res.send('')
 })
 router.put('/:id', (req: Request, res: Response) => {
-    service.put(req.params.id, req.body)
-    return res.send('')
+    const notatId = req.params.id as unknown as ObjectId;
+    const resObj: INote = service.put(notatId, req.body)
+    return res.send(resObj)
 })
 
 export default router;

@@ -1,5 +1,6 @@
 import notaterRepo from "./notaterRepo";
-import {INote, INoteDTO} from "./notater";
+import {INoteUpdateDTO, INoteDTO} from "./notater";
+import { ObjectId } from "mongoose";
 const repo = new notaterRepo();
 class notaterService {
     getAllById = (id: number) => {
@@ -13,7 +14,7 @@ class notaterService {
     post = (note: INoteDTO) => {
         return repo.post(note)
     }
-    put = (id: string, note: INoteDTO) => {
+    put = (id: ObjectId, note: INoteUpdateDTO) => {
         return repo.put(id, note)
     }
 }

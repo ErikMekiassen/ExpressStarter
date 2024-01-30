@@ -2,11 +2,13 @@ require('dotenv').config()
 import notescontroller from './features/notater/notaterController';
 import brukercontroller from './features/bruker/brukerController';
 import loadDataClass from './modules/loadData';
+import { logging } from './middleware/logging';
 const loadData = new loadDataClass();
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose')
 
+app.use(logging);
 app.use(express.json());
 app.use('/notes', notescontroller);
 app.use('/bruker', brukercontroller);
