@@ -6,7 +6,7 @@ on:
 jobs:
   deploy:
     name: Build and push image to Docker Hub
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       # Checkout the code from the branch that triggered the workflow
       - uses: actions/checkout@v3
